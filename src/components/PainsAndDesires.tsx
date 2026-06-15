@@ -28,8 +28,8 @@ const PainsAndDesires = () => {
               className="group p-6 rounded-2xl border border-slate-100 bg-white hover:border-accent/40 hover:shadow-premium transition-all duration-300 flex items-start gap-4"
             >
               <div className="shrink-0 mt-1">
-                <div className="w-6 h-6 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-red-50 transition-colors">
-                  <XCircle className="w-4 h-4 text-slate-300 group-hover:text-red-500 transition-colors" />
+                <div className="w-6 h-6 rounded-full bg-red-50 flex items-center justify-center group-hover:bg-red-100 transition-colors">
+                  <XCircle className="w-4 h-4 text-red-600 transition-colors" />
                 </div>
               </div>
               <p className="text-slate-700 font-semibold leading-relaxed group-hover:text-premium-dark transition-colors">{item}</p>

@@ -53,8 +53,8 @@ const MethodTimeline = () => {
           <div className="mt-20 max-w-4xl mx-auto">
             <div className="bg-premium-dark text-white p-8 md:p-12 rounded-[2rem] relative overflow-hidden shadow-2xl">
               <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 blur-[80px] rounded-full translate-x-1/2 -translate-y-1/2"></div>
-              <div className="relative z-10 flex flex-col md:flex-row items-center gap-8">
-                <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center shrink-0 rotate-3">
+              <div className="relative z-10 flex flex-col md:flex-row items-start gap-8">
+                <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center shrink-0 mt-2">
                   <ArrowRight className="w-8 h-8 text-premium-dark" />
                 </div>
                 <p className="text-lg md:text-xl italic leading-relaxed text-slate-200">

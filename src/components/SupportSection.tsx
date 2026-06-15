@@ -11,7 +11,7 @@ const SupportSection = () => {
         <div className="max-w-5xl mx-auto p-8 md:p-16 bg-premium-light rounded-[3rem] border border-slate-100 flex flex-col md:flex-row items-center gap-12 relative group shadow-premium">
           <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 blur-2xl rounded-full"></div>
           
-          <div className="w-24 h-24 bg-accent rounded-[2rem] flex items-center justify-center shrink-0 shadow-accent rotate-6 group-hover:rotate-0 transition-transform duration-500">
+          <div className="w-24 h-24 bg-accent rounded-[2rem] flex items-center justify-center shrink-0 shadow-accent transition-transform duration-500">
             <MessageCircle className="w-12 h-12 text-premium-dark" />
           </div>
           

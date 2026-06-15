@@ -7,7 +7,7 @@ const Hero = () => {
   const { hero } = landingContent;
 
   return (
-    <section className="relative min-h-[95vh] flex items-center justify-center pt-28 pb-20 px-4 bg-premium-black overflow-hidden">
+    <section className="relative min-h-[95vh] flex items-center justify-center pt-20 md:pt-28 pb-20 px-4 bg-premium-black overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-accent/10 blur-[120px] rounded-full"></div>

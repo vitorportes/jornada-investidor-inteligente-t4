@@ -51,15 +51,11 @@ const ProductExplainer = () => {
             </div>
             
             <div className="premium-card sm:col-span-2 group hover:border-accent/40 transition-all duration-300">
-              <div className="flex items-center gap-6">
-                <div className="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center group-hover:bg-accent transition-all duration-300 shrink-0">
-                  <ShieldCheck className="w-8 h-8 text-accent group-hover:text-premium-dark" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-premium-dark text-lg mb-1">Segurança e Método</h3>
-                  <p className="text-sm text-slate-600 leading-relaxed">Construa sua carteira com base em lógica, diversificação inteligente e autonomia, sem depender de "dicas quentes".</p>
-                </div>
+              <div className="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent transition-all duration-300">
+                <ShieldCheck className="w-8 h-8 text-accent group-hover:text-premium-dark" />
               </div>
+              <h3 className="font-bold text-premium-dark text-lg mb-2">Segurança e Método</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">Construa sua carteira com base em lógica, diversificação inteligente e autonomia, sem depender de "dicas quentes".</p>
             </div>
           </div>
         </div>
