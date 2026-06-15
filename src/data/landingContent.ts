@@ -84,12 +84,12 @@ export const landingContent = {
     title: "Veja o que alunos de edições anteriores disseram depois de viver a Jornada",
     subtitle: "Antes era confusão. Depois da Jornada, clareza.",
     items: [
-      { name: "Ana Paula", profession: "Servidora Pública", videoUrl: "" },
-      { name: "Marcos Oliveira", profession: "Engenheiro", videoUrl: "" },
-      { name: "Clara Mendes", profession: "Médica", videoUrl: "" },
-      { name: "Ricardo Santos", profession: "Empresário", videoUrl: "" },
-      { name: "Juliana Costa", profession: "Arquiteta", videoUrl: "" },
-      { name: "Felipe Almeida", profession: "Advogado", videoUrl: "" }
+      { name: "Isabelle", profession: "Nutricionista", videoUrl: "https://www.youtube.com/shorts/LR1LZWClatY" },
+      { name: "Calebe Tatagiba", profession: "Empresário", videoUrl: "https://www.youtube.com/shorts/5lVzbWsxA58" },
+      { name: "Danilo", profession: "Gestor de Projetos", videoUrl: "https://www.youtube.com/shorts/0rmCqlyfg1g" },
+      { name: "Isac Mendes", profession: "Professor Universitário", videoUrl: "https://www.youtube.com/shorts/9cRM4W_Oe94" },
+      { name: "Eddie Paiva", profession: "Professor", videoUrl: "https://www.youtube.com/shorts/tu7l05-nBis" },
+      { name: "Ridley Frazoso", profession: "Professor Universitário", videoUrl: "https://www.youtube.com/shorts/ICdMy1u9PVI" }
     ]
   },
   authority: {
