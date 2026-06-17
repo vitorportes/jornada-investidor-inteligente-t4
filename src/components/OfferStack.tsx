@@ -6,7 +6,7 @@ const OfferStack = () => {
   const { offer } = landingContent;
 
   return (
-    <section className="py-24 bg-white">
+    <section id="offer" className="py-24 bg-white">
       <div className="section-container">
         <div className="text-center mb-16 max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 px-3 py-1 mb-4 text-xs font-bold tracking-widest text-accent uppercase bg-accent/10 rounded-full">

@@ -23,7 +23,6 @@ export default function Home() {
       <ProductExplainer />
       <MethodTimeline />
       <AudienceSection />
-      <PainsAndDesires />
       <OfferStack />
       <RationalArguments />
       <ComparisonSection />

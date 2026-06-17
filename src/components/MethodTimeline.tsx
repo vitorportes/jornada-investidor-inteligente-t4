@@ -1,6 +1,7 @@
 import React from 'react';
 import { landingContent } from '@/data/landingContent';
 import { CheckCircle2, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 const MethodTimeline = () => {
   const { method } = landingContent;
@@ -8,7 +9,7 @@ const MethodTimeline = () => {
   return (
     <section id="method" className="py-24 bg-premium-light overflow-hidden">
       <div className="section-container">
-        <div className="text-center max-w-3xl mx-auto mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-5xl font-black mb-6 text-premium-dark">
             {method.title}
           </h2>
@@ -17,33 +18,39 @@ const MethodTimeline = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative">
           {method.steps.map((step) => (
             <div 
               key={step.id} 
-              className="premium-card relative group flex flex-col h-full hover:scale-[1.02] transition-transform duration-300"
+              className="premium-card relative group flex flex-col h-full hover:scale-[1.02] transition-transform duration-300 overflow-hidden !p-0 border border-slate-200 shadow-sm bg-white"
             >
-              <div className="absolute top-0 right-0 p-6 text-6xl font-black text-slate-50 group-hover:text-accent/10 transition-colors pointer-events-none">
-                {step.id}
-              </div>
+              {/* Module Image - Adjusted height for better balance */}
+              {step.imageUrl && (
+                <div className="relative h-60 md:h-64 w-full overflow-hidden">
+                  <Image 
+                    src={step.imageUrl} 
+                    alt={step.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                </div>
+              )}
               
-              <div className="relative z-10 flex flex-col h-full">
-                <div className="w-12 h-12 bg-accent/10 text-accent rounded-xl flex items-center justify-center mb-6 font-bold text-xl border border-accent/20">
-                  {step.id}
+              {/* Content area - More prominent title and badge */}
+              <div className="relative z-10 flex flex-col p-5 bg-white">
+                <div className="flex items-center gap-4 mb-3">
+                  <div className="w-10 h-10 bg-accent/10 text-accent rounded-lg flex items-center justify-center font-bold text-lg border border-accent/20 shrink-0">
+                    {step.id}
+                  </div>
+                  <h3 className="text-lg font-bold text-premium-dark leading-tight group-hover:text-accent transition-colors">
+                    {step.title}
+                  </h3>
                 </div>
                 
-                <h3 className="text-xl font-bold text-premium-dark mb-4 pr-12 group-hover:text-accent transition-colors">
-                  {step.title}
-                </h3>
-                
-                <p className="text-slate-600 leading-relaxed flex-grow">
+                <p className="text-sm text-slate-600 leading-relaxed">
                   {step.description}
                 </p>
-                
-                <div className="mt-8 pt-6 border-t border-slate-50 flex items-center gap-2 text-accent font-bold text-sm uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">
-                  <span>Passo Concluído</span>
-                  <CheckCircle2 className="w-4 h-4" />
-                </div>
               </div>
             </div>
           ))}

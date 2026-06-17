@@ -100,6 +100,34 @@ const ProofSection = () => {
             );
           })}
         </div>
+
+        {/* Gallery of Previous Classes */}
+        <div className="mt-32">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-black text-premium-dark uppercase tracking-tight mb-2">
+              Nossas Turmas Anteriores
+            </h3>
+            <p className="text-slate-500 font-medium">Imersões presenciais que transformaram clareza em ação.</p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-10 px-4 max-w-5xl mx-auto">
+            {proofs.gallery?.map((photo, idx) => (
+              <div 
+                key={idx} 
+                className={`relative aspect-square rounded-2xl overflow-hidden shadow-xl border-4 border-white transform transition-all duration-300 hover:scale-110 hover:z-10 hover:rotate-0 ${
+                  idx % 2 === 0 ? 'rotate-2' : '-rotate-2'
+                }`}
+              >
+                <Image
+                  src={photo.url}
+                  alt={photo.alt}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
         
         <div className="mt-20 text-center">
           <div className="inline-flex items-center gap-3 px-6 py-3 bg-white rounded-full border border-slate-100 shadow-sm">

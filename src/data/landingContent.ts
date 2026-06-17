@@ -17,18 +17,25 @@ export const landingContent = {
     trustLine: "Imersão presencial • 1 dia • Método Carteira Inteligente",
     closing: "Investir bem não é acertar o próximo grande ativo. É saber proteger seu dinheiro, respeitar seus prazos e tomar decisões com clareza."
   },
+  eventDetails: {
+    location: "Macaé/RJ",
+    venue: "Hotel Royal Kingdom",
+    time: "Das 8h às 18h",
+    date: "Sábado, 15 de agosto de 2026",
+    isoDate: "2026-08-15T08:00:00"
+  },
   method: {
     title: "Como funciona na prática",
     description: "A Jornada Investidor Inteligente não é uma aula genérica sobre investimentos. É uma imersão presencial de 1 dia onde você será conduzido, passo a passo, pelos módulos que realmente importam para o seu bolso.",
     steps: [
-      { id: 1, title: "Organização e Educação Financeira", description: "Controle de orçamento, reserva de emergência, fundamentos." },
-      { id: 2, title: "Mentalidade Financeira e Psicologia do Investidor", description: "Hábitos de sucesso e comportamentos que sabotam resultados." },
-      { id: 3, title: "Renda Fixa na Prática", description: "Tesouro Direto, CDB, LCI, LCA — como analisar e escolher." },
-      { id: 4, title: "Fundos de Investimento Imobiliário (FIIs)", description: "Renda passiva com imóveis a partir de R$100, isenta de IR." },
-      { id: 5, title: "Renda Variável — Ações e ETFs", description: "Estratégias de longo prazo e fundamentos de análise." },
-      { id: 6, title: "Carteira Diversificada e Equilibrada", description: "Alocação de ativos por perfil, objetivo e horizonte." },
-      { id: 7, title: "Renda Passiva — Estratégias Práticas", description: "Como fazer o dinheiro trabalhar por você continuamente." },
-      { id: 8, title: "Planejamento de Aposentadoria", description: "Quanto poupar, onde investir, quando alcançar a liberdade." }
+      { id: 1, title: "Organização e Educação Financeira", description: "Controle de orçamento, reserva de emergência, fundamentos.", imageUrl: "/media/modules/modulo1.png" },
+      { id: 2, title: "Mentalidade Financeira e Psicologia do Investidor", description: "Hábitos de sucesso e comportamentos que sabotam resultados.", imageUrl: "/media/modules/modulo2.png" },
+      { id: 3, title: "Renda Fixa na Prática", description: "Tesouro Direto, CDB, LCI, LCA — como analisar e escolher.", imageUrl: "/media/modules/modulo3.png" },
+      { id: 4, title: "Fundos de Investimento Imobiliário (FIIs)", description: "Renda passiva com imóveis a partir de R$100, isenta de IR.", imageUrl: "/media/modules/módulo4.png" },
+      { id: 5, title: "Renda Variável — Ações e ETFs", description: "Estratégias de longo prazo e fundamentos de análise.", imageUrl: "/media/modules/modulo5.png" },
+      { id: 6, title: "Carteira Diversificada e Equilibrada", description: "Alocação de ativos por perfil, objetivo e horizonte.", imageUrl: "/media/modules/modulo6.png" },
+      { id: 7, title: "Renda Passiva — Estratégias Práticas", description: "Como fazer o dinheiro trabalhar por você continuamente.", imageUrl: "/media/modules/modulo7.png" },
+      { id: 8, title: "Planejamento de Aposentadoria", description: "Quanto poupar, onde investir, quando alcançar a liberdade.", imageUrl: "/media/modules/modulo8.png" }
     ],
     closing: "É como sair de uma estrada escura, cheia de placas confusas, e finalmente acender o farol: você entende onde está, para onde quer ir e qual caminho faz sentido para o seu dinheiro."
   },
@@ -51,7 +58,12 @@ export const landingContent = {
   productExplainer: {
     title: "O que é a Jornada",
     description: "A Jornada Investidor Inteligente é uma imersão presencial, prática e guiada de 1 dia. Ela foi criada para tirar você do campo da dúvida e colocar sua vida financeira em ordem com método.",
-    details: "Enquanto muitos cursos entregam aulas gravadas, excesso de teoria ou recomendações genéricas, a Jornada conduz você ao vivo por um processo completo: mentalidade, diagnóstico, perfil, objetivos, ativos, carteira e execução prática."
+    details: "Enquanto muitos cursos entregam aulas gravadas, excesso de teoria ou recomendações genéricas, a Jornada conduz você ao vivo por um processo completo:",
+    pillars: [
+      { title: "Mentalidade", description: "Aprenda a pensar como um investidor institucional e abandone a mentalidade de apostador." },
+      { title: "Diagnóstico", description: "Entenda sua realidade financeira real, perfil de risco e objetivos de curto, médio e longo prazo." },
+      { title: "Segurança e Método", description: "Construa sua carteira com base em lógica, diversificação inteligente e autonomia, sem depender de 'dicas quentes'." }
+    ]
   },
   offer: {
     title: "Ao entrar na Jornada Investidor Inteligente, você recebe:",
@@ -90,6 +102,11 @@ export const landingContent = {
       { name: "Isac Mendes", profession: "Professor Universitário", videoUrl: "https://www.youtube.com/shorts/9cRM4W_Oe94" },
       { name: "Eddie Paiva", profession: "Professor", videoUrl: "https://www.youtube.com/shorts/tu7l05-nBis" },
       { name: "Ridley Frazoso", profession: "Professor Universitário", videoUrl: "https://www.youtube.com/shorts/ICdMy1u9PVI" }
+    ],
+    gallery: [
+      { url: "/media/testimonials/turma1.jpeg", alt: "Turma da Jornada Investidor Inteligente" },
+      { url: "/media/testimonials/turma 2.jpeg", alt: "Momento de aprendizado na imersão" },
+      { url: "/media/testimonials/turma-3.jpg", alt: "Alunos reunidos na edição anterior" }
     ]
   },
   authority: {
@@ -102,7 +119,7 @@ export const landingContent = {
       "Educador Financeiro e Consultor",
       "Professor Universitário há 20 anos"
     ],
-    bio: "Depois de muitos anos estudando, errando, aprendendo e investindo na prática, ficou claro que o maior problema das pessoas não é a falta de dinheiro, mas a falta de clareza e autonomia. Minha missão é guiar você para assumir o controle da sua vida financeira e construir um caminho sólido rumo à prosperidade."
+    bio: "Há alguns anos, eu era exatamente o tipo de pessoa que a Jornada atende hoje. Tinha uma boa formação acadêmica, uma carreira sólida — e não fazia a menor ideia do que fazer com meu dinheiro além de deixar na poupança ou aceitar o que o gerente sugeria.\n\nPassei anos estudando investimentos por conta própria. Errei, aprendi, errei de novo. Vi de perto o custo de decisões tomadas por impulso, por \"dica quente\" ou por falta de método. E percebi que o problema nunca foi falta de inteligência ou disciplina — foi falta de um caminho estruturado.\n\n\"Depois de muitos anos estudando, errando e investindo na prática, ficou claro que o maior problema das pessoas não é a falta de dinheiro — é a falta de clareza e autonomia. Minha missão é guiar você para assumir o controle da sua vida financeira.\"\n\nÉ esse caminho que eu sistematizei no Método Carteira Inteligente. E é esse caminho que eu conduzo na Jornada — presencialmente, passo a passo, com a mesma atenção que eu gostaria de ter recebido quando comecei.",
   },
   objections: [
     { title: "Tenho medo de perder dinheiro investindo.", text: "Esse medo é legítimo. Na Jornada, você não aprende a apostar. Você aprende a pensar com método antes de investir, entendendo risco, liquidez e prazo." },

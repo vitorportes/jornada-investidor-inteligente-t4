@@ -30,11 +30,9 @@ const Footer = () => {
               </ul>
             </div>
             <div className="space-y-4">
-              <h3 className="text-accent font-black text-xs uppercase tracking-[0.2em] mb-6">Legal</h3>
+              <h3 className="text-accent font-black text-xs uppercase tracking-[0.2em] mb-6">Suporte</h3>
               <ul className="space-y-3 text-sm font-medium text-slate-400">
-                <li><a href="#" className="hover:text-accent transition-colors">Termos de Uso</a></li>
-                <li><a href="#" className="hover:text-accent transition-colors">Privacidade</a></li>
-                <li><a href="#" className="hover:text-accent transition-colors">Contato</a></li>
+                <li><a href="https://wa.me/5522992180488?text=Ol%C3%A1!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20a%20Jornada%20Investidor%20Inteligente.%20" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">Contato no WhatsApp</a></li>
               </ul>
             </div>
           </div>

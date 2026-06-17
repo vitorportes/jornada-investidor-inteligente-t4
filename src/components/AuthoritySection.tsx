@@ -9,7 +9,7 @@ const AuthoritySection = () => {
   return (
     <section id="authority" className="py-24 bg-white overflow-hidden">
       <div className="section-container">
-        <div className="flex flex-col lg:flex-row gap-16 items-center">
+        <div className="flex flex-col lg:flex-row gap-16 items-start">
           <div className="flex-1 space-y-8 order-2 lg:order-1">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 text-xs font-bold tracking-widest text-accent uppercase bg-accent/10 rounded-full">
@@ -21,14 +21,26 @@ const AuthoritySection = () => {
               </h2>
               <div className="h-1.5 w-20 bg-accent rounded-full mb-8"></div>
               
-              <p className="text-lg md:text-xl text-slate-600 leading-relaxed italic mb-8 relative">
-                <span className="absolute -top-4 -left-6 text-6xl text-accent/10 font-serif">"</span>
-                {authority.bio}
-                <span className="absolute -bottom-10 -right-2 text-6xl text-accent/10 font-serif">"</span>
-              </p>
+              <div className="space-y-6 text-slate-600 leading-relaxed text-base md:text-lg">
+                {authority.bio.split('\n\n').map((paragraph, idx) => {
+                  const isQuote = paragraph.startsWith('"') && paragraph.endsWith('"');
+                  
+                  if (isQuote) {
+                    return (
+                      <blockquote key={idx} className="relative py-8 px-12 bg-premium-light rounded-2xl border-l-4 border-accent italic font-medium text-premium-dark leading-relaxed">
+                        <span className="absolute top-2 left-4 text-6xl text-accent/10 font-serif select-none">"</span>
+                        <span className="relative z-10">{paragraph.replace(/"/g, '')}</span>
+                        <span className="absolute -bottom-6 right-8 text-6xl text-accent/10 font-serif select-none">"</span>
+                      </blockquote>
+                    );
+                  }
+                  
+                  return <p key={idx}>{paragraph}</p>;
+                })}
+              </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
               {authority.credentials.map((cred, index) => (
                 <div key={index} className="flex items-center gap-4 p-5 bg-premium-light rounded-2xl border border-slate-100 group hover:border-accent/40 transition-colors">
                   <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm group-hover:bg-accent group-hover:text-premium-dark transition-all">
@@ -42,7 +54,7 @@ const AuthoritySection = () => {
             </div>
           </div>
 
-          <div className="flex-1 w-full max-w-lg order-1 lg:order-2">
+          <div className="flex-1 w-full max-w-lg order-1 lg:order-2 lg:sticky lg:top-24">
             <div className="relative">
               {/* Decorative elements behind photo */}
               <div className="absolute -top-10 -right-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
