@@ -15,6 +15,8 @@ import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import CTAButton from "@/components/CTAButton";
 import { CheckCircle, ShieldCheck, Zap } from "lucide-react";
+import { landingContent } from "@/data/landingContent";
+import CountdownTimer from "@/components/CountdownTimer";
 
 export default function Home() {
   return (
@@ -53,6 +55,8 @@ export default function Home() {
               Em apenas 1 dia, você pode sair da confusão absoluta e construir uma visão profissional sobre seus investimentos. 
               A Jornada foi criada para quem busca método, segurança e clareza total.
             </p>
+
+            <CountdownTimer targetDate={landingContent.eventDetails.isoDate} className="w-full max-w-2xl mb-12 mx-auto" />
             
             <div className="flex flex-col items-center gap-8">
               <CTAButton className="w-full md:w-auto min-w-[340px] py-5 text-xl shadow-accent">
@@ -79,13 +83,6 @@ export default function Home() {
       </section>
 
       <Footer />
-
-      {/* Sticky Mobile CTA */}
-      <div className="fixed bottom-0 left-0 right-0 p-4 md:hidden z-50 bg-white/95 backdrop-blur-md border-t border-slate-100 shadow-[0_-10px_20px_rgba(0,0,0,0.05)]">
-        <CTAButton className="w-full py-4 text-base shadow-accent">
-          GARANTIR MINHA VAGA
-        </CTAButton>
-      </div>
     </main>
   );
 }

@@ -1,81 +1,9 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import CTAButton from './CTAButton';
 import { landingContent } from '@/data/landingContent';
-import { CheckCircle2, MapPin, Calendar, Clock, Hotel, Timer } from 'lucide-react';
-
-const CountdownTimer = ({ targetDate }: { targetDate: string }) => {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0
-  });
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = new Date(targetDate).getTime() - now;
-
-      if (distance < 0) {
-        clearInterval(timer);
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-      } else {
-        setTimeLeft({
-          days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-          minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-          seconds: Math.floor((distance % (1000 * 60)) / 1000)
-        });
-      }
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, [targetDate]);
-
-  return (
-    <div className="w-full max-w-2xl mb-12">
-      <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-8 shadow-2xl relative overflow-hidden group">
-        {/* Glow effect */}
-        <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-        
-        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-12">
-          <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <div className="flex items-center gap-2 mb-2">
-              <Timer className="w-5 h-5 text-accent animate-pulse" />
-              <span className="text-xs font-black text-accent uppercase tracking-widest">Contagem Regressiva</span>
-            </div>
-            <p className="text-slate-300 font-medium text-sm md:text-base max-w-[240px]">
-              O tempo está acabando para você garantir sua vaga na imersão.
-            </p>
-          </div>
-
-          <div className="flex items-center gap-3 md:gap-6">
-            {[
-              { label: 'D', value: timeLeft.days },
-              { label: 'H', value: timeLeft.hours },
-              { label: 'M', value: timeLeft.minutes },
-              { label: 'S', value: timeLeft.seconds }
-            ].map((item, idx) => (
-              <React.Fragment key={idx}>
-                <div className="flex flex-col items-center">
-                  <div className="text-2xl md:text-4xl font-black text-white tabular-nums">
-                    {item.value.toString().padStart(2, '0')}
-                  </div>
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500">{item.label}</span>
-                </div>
-                {idx < 3 && (
-                  <div className="text-xl md:text-2xl font-black text-white/20 mb-4">:</div>
-                )}
-              </React.Fragment>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+import { CheckCircle2, MapPin, Calendar, Clock, Hotel } from 'lucide-react';
 
 const Hero = () => {
   const { hero, eventDetails } = landingContent;
@@ -124,13 +52,13 @@ const Hero = () => {
             </div>
           </div>
           
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-6 tracking-tight max-w-5xl">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-white leading-[1.1] mb-6 tracking-tight max-w-5xl">
             {hero.headline}
           </h1>
           
-          <p className="text-lg md:text-xl font-medium text-slate-200 mb-6 max-w-4xl mx-auto leading-relaxed animate-fade-in">
+           <p className="text-base md:text-lg font-medium text-slate-200 mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in">
             {hero.subheadline}
-          </p>     
+          </p>
 
           {/* Video Placeholder */}
           <div className="w-full max-w-4xl mb-12 aspect-video bg-white/5 rounded-[2rem] border border-white/10 backdrop-blur-sm relative overflow-hidden group cursor-pointer shadow-2xl">
@@ -181,8 +109,6 @@ const Hero = () => {
               <span className="text-white font-bold">{eventDetails.date.split(',')[1]}</span>
             </div>
           </div>
-
-          <CountdownTimer targetDate={eventDetails.isoDate} />
 
           <div className="flex flex-col items-center gap-10 w-full">
             <CTAButton className="w-full md:w-auto min-w-[340px]">

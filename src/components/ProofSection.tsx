@@ -66,16 +66,16 @@ const ProofSection = () => {
           <p className="text-slate-500 font-medium">Veja e ouça a história de quem viveu a experiência na prática.</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8">
           {proofs.items.map((item, index) => {
             const videoId = getYouTubeId(item.videoUrl);
             const isPlaying = activeVideo === videoId;
 
             return (
-              <div key={index} className="flex flex-col gap-4 group">
+              <div key={index} className="flex flex-col gap-2 sm:gap-4 group">
                 {/* Vertical Video Container */}
                 <div 
-                  className="aspect-[9/16] bg-premium-dark rounded-[2rem] border-4 border-white shadow-premium relative cursor-pointer overflow-hidden group/video"
+                  className="aspect-[9/16] bg-premium-dark rounded-2xl sm:rounded-[2rem] border-2 sm:border-4 border-white shadow-premium relative cursor-pointer overflow-hidden group/video"
                   onClick={() => videoId && !isPlaying && setActiveVideo(videoId)}
                 >
                   {isPlaying ? (
@@ -92,9 +92,9 @@ const ProofSection = () => {
                           e.stopPropagation();
                           setActiveVideo(null);
                         }}
-                        className="absolute top-4 right-4 z-30 bg-black/50 text-white p-2 rounded-full hover:bg-black transition-colors"
+                        className="absolute top-2 right-2 sm:top-4 sm:right-4 z-30 bg-black/50 text-white p-1.5 sm:p-2 rounded-full hover:bg-black transition-colors"
                       >
-                        <X className="w-5 h-5" />
+                        <X className="w-4 h-4 sm:w-5 sm:h-5" />
                       </button>
                     </div>
                   ) : (
@@ -110,9 +110,9 @@ const ProofSection = () => {
                         <div className="absolute inset-0 bg-accent/5 group-hover/video:bg-accent/10 transition-colors"></div>
                       )}
                       
-                      <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center z-10">
-                        <PlayCircle className="w-20 h-20 text-accent mb-4 group-hover/video:scale-110 transition-transform shadow-2xl" />
-                        <p className="text-white font-black uppercase tracking-widest text-xs">Assistir Depoimento</p>
+                      <div className="absolute inset-0 flex flex-col items-center justify-center p-2 sm:p-8 text-center z-10">
+                        <PlayCircle className="w-10 h-10 sm:w-20 sm:h-20 text-accent mb-2 sm:mb-4 group-hover/video:scale-110 transition-transform shadow-2xl" />
+                        <p className="text-white font-black uppercase tracking-widest text-[8px] sm:text-xs">Assistir Depoimento</p>
                       </div>
                       
                       {/* Gradient Overlay for legibility */}
@@ -121,9 +121,9 @@ const ProofSection = () => {
                   )}
                 </div>
                 
-                <div className="px-4">
-                  <p className="font-black text-premium-dark text-lg uppercase leading-tight">{item.name}</p>
-                  <p className="text-sm text-accent font-bold uppercase tracking-wider">{item.profession}</p>
+                <div className="px-2 sm:px-4">
+                  <p className="font-black text-premium-dark text-xs sm:text-lg uppercase leading-tight">{item.name}</p>
+                  <p className="text-[10px] sm:text-sm text-accent font-bold uppercase tracking-wider">{item.profession}</p>
                 </div>
               </div>
             );
