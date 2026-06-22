@@ -124,9 +124,13 @@ const Hero = () => {
             </div>
           </div>
           
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-8 tracking-tight max-w-5xl">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-6 tracking-tight max-w-5xl">
             {hero.headline}
           </h1>
+          
+          <p className="text-lg md:text-xl font-medium text-slate-200 mb-6 max-w-4xl mx-auto leading-relaxed animate-fade-in">
+            {hero.subheadline}
+          </p>     
 
           {/* Video Placeholder */}
           <div className="w-full max-w-4xl mb-12 aspect-video bg-white/5 rounded-[2rem] border border-white/10 backdrop-blur-sm relative overflow-hidden group cursor-pointer shadow-2xl">
@@ -138,14 +142,21 @@ const Hero = () => {
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-premium-black/40 to-transparent pointer-events-none"></div>
           </div>
-          
-          <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed font-medium">
-            {hero.subheadline}
-          </p>
 
-          <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto leading-relaxed">
-            {hero.description}
-          </p>
+          {/* Bullets Points Card */}
+          <div className="w-full max-w-3xl bg-white/5 p-8 rounded-2xl border border-white/10 backdrop-blur-sm mb-12">
+            <h3 className="text-lg font-bold text-white mb-6 text-center">
+              Durante a Jornada, você vai descobrir como:
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 text-left">
+              {hero.bullets.map((bullet, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 shrink-0" />
+                  <span className="text-slate-200 font-medium text-sm leading-snug">{bullet}</span>
+                </div>
+              ))}
+            </div>
+          </div>
 
           {/* Event Info Highlights - Positioned after Subheadline and Description */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12 w-full max-w-5xl">
@@ -177,15 +188,6 @@ const Hero = () => {
             <CTAButton className="w-full md:w-auto min-w-[340px]">
               {hero.cta}
             </CTAButton>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 text-left max-w-3xl bg-white/5 p-8 rounded-2xl border border-white/10 backdrop-blur-sm">
-              {hero.bullets.map((bullet, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 shrink-0" />
-                  <span className="text-slate-200 font-medium text-sm leading-snug">{bullet}</span>
-                </div>
-              ))}
-            </div>
 
             {hero.closing && (
               <div className="max-w-2xl mx-auto pt-10 border-t border-white/10">

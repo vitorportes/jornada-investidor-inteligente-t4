@@ -23,11 +23,11 @@ export default function Home() {
       <ProductExplainer />
       <MethodTimeline />
       <AudienceSection />
+      <ProofSection />
       <OfferStack />
+      <BonusCards />
       <RationalArguments />
       <ComparisonSection />
-      <BonusCards />
-      <ProofSection />
       <AuthoritySection />
       <PricingSection />
       <SupportSection />

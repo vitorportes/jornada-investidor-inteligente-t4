@@ -1,8 +1,8 @@
 export const landingContent = {
   hero: {
-    headline: "Comece a investir com segurança em apenas 1 dia — sem depender de dica quente, gerente de banco ou vídeos soltos na internet",
-    subheadline: "Participe da Jornada Investidor Inteligente, uma imersão presencial, prática e guiada para você organizar sua vida financeira, entender seu perfil de investidor e montar uma estratégia de investimentos com mais clareza, método e autonomia.",
-    description: "Em vez de ficar perdido entre CDB, Tesouro Direto, fundos, ações, FIIs e recomendações contraditórias, você vai aprender o Método Carteira Inteligente para dar o próximo passo com segurança.",
+    headline: "Você sabe que precisa investir melhor, mas o medo de perder dinheiro e a confusão entre tantas opções fazem você continuar adiando",
+    subheadline: "Em 1 dia, a Jornada Investidor Inteligente vai ajudar você a entender o que fazer com seu dinheiro, organizar seus investimentos e construir uma estratégia coerente com sua realidade — mesmo que hoje você não saiba por onde começar.",
+    description: "Imersão presencial, prática e guiada para quem quer parar de depender de dicas, gerente de banco e vídeos soltos na internet.",
     bullets: [
       "Parar de investir por impulso, medo ou indicação dos outros.",
       "Entender quais investimentos fazem sentido para o seu momento de vida.",
@@ -67,16 +67,40 @@ export const landingContent = {
   },
   offer: {
     title: "Ao entrar na Jornada Investidor Inteligente, você recebe:",
-    items: [
-      { title: "Imersão Presencial de 1 Dia", description: "O coração da oferta. Uma experiência prática e guiada onde você atravessa o Método Carteira Inteligente em um único dia." },
-      { title: "Apostila / Guia do Método Carteira Inteligente", description: "Funciona como o mapa físico da jornada para anotações e revisões futuras." },
-      { title: "Planilha Carteira Inteligente", description: "Sua sala de controle financeira para visualizar investimentos, objetivos e prazos." },
-      { title: "Simulador de Aportes Mensais", description: "Ajuda você a enxergar o futuro e visualizar como a constância ajuda na construção patrimonial." },
-      { title: "Checklist de Avaliação de Produto Financeiro", description: "Um filtro anti-decisão errada para avaliar risco, liquidez, prazo e rentabilidade antes de investir." },
-      { title: "Grupo Exclusivo", description: "Ambiente de pertencimento e continuidade para acompanhamento de avisos e orientações." },
-      { title: "Plantão de Dúvidas Pós-Imersão", description: "O cinto de segurança depois da largada para ajudar você a não travar depois do evento." },
-      { title: "Estudos de Caso / Análises Reais", description: "Aprenda com exemplos práticos de carteiras e reorganizações possíveis." }
-    ]
+items: [
+  {
+    title: "Imersão Presencial de 1 Dia",
+    description: "Em um único dia, você sai da confusão e constrói uma visão clara sobre onde está, o que precisa organizar e quais passos fazem sentido para começar ou evoluir seus investimentos."
+  },
+  {
+    title: "Apostila / Guia do Método Carteira Inteligente",
+    description: "Você sai da imersão com um plano organizado em mãos para revisar decisões, relembrar o método e não voltar a se sentir perdido depois do evento."
+  },
+  {
+    title: "Planilha Carteira Inteligente",
+    description: "Você visualiza sua carteira de forma simples, identifica investimentos soltos e entende o que precisa manter, ajustar ou reorganizar de acordo com seus objetivos."
+  },
+  {
+    title: "Simulador de Aportes Mensais",
+    description: "Você descobre quanto pode investir por mês e visualiza como a constância dos aportes pode ajudar a transformar dinheiro parado em patrimônio ao longo do tempo."
+  },
+  {
+    title: "Checklist de Avaliação de Produto Financeiro",
+    description: "Antes de aceitar uma oferta do banco ou seguir uma recomendação, você analisa os principais critérios e reduz o risco de investir em algo que não combina com seu perfil e seus objetivos."
+  },
+  {
+    title: "Grupo Exclusivo",
+    description: "Você continua acompanhado depois da imersão, tira dúvidas, reforça o aprendizado e evita ficar sozinho justamente no momento de colocar o plano em prática."
+  },
+  {
+    title: "Plantão de Dúvidas Pós-Imersão",
+    description: "Quando surgir aquela dúvida ao abrir a corretora ou revisar seus investimentos, você terá apoio para não travar, não adiar e não tomar decisões no impulso."
+  },
+  {
+    title: "Estudos de Caso / Análises Reais",
+    description: "Você aprende a reconhecer erros e oportunidades em situações parecidas com a sua, tornando mais fácil aplicar o método na própria carteira."
+  }
+]
   },
   bonus: [
     { title: "Guia Primeiros Passos Fora da Poupança", description: "Para quem sabe que precisa sair da poupança, mas ainda sente medo. Mostra como pensar com critério sobre reserva, liquidez e risco." },
@@ -95,6 +119,24 @@ export const landingContent = {
   proofs: {
     title: "Veja o que alunos de edições anteriores disseram depois de viver a Jornada",
     subtitle: "Antes era confusão. Depois da Jornada, clareza.",
+    instagramPrints: [
+      { url: "/media/testimonials/insta1.jpeg", alt: "Feedback Instagram 1" },
+      { url: "/media/testimonials/insta2.jpeg", alt: "Feedback Instagram 2" },
+      { url: "/media/testimonials/insta3.jpeg", alt: "Feedback Instagram 3" },
+      { url: "/media/testimonials/insta4.jpeg", alt: "Feedback Instagram 4" },
+      { url: "/media/testimonials/insta5.jpeg", alt: "Feedback Instagram 5" },
+      { url: "/media/testimonials/insta6.jpeg", alt: "Feedback Instagram 6" },
+      { url: "/media/testimonials/insta7.jpeg", alt: "Feedback Instagram 7" },
+      { url: "/media/testimonials/insta8.jpeg", alt: "Feedback Instagram 8" }
+    ],
+    whatsappPrints: [
+      { url: "/media/testimonials/print1.jpg", alt: "Feedback de aluno no WhatsApp 1" },
+      { url: "/media/testimonials/print2.jpg", alt: "Feedback de aluno no WhatsApp 2" },
+      { url: "/media/testimonials/print3.jpg", alt: "Feedback de aluno no WhatsApp 3" },
+      { url: "/media/testimonials/print4.jpg", alt: "Feedback de aluno no WhatsApp 4" },
+      { url: "/media/testimonials/print5.jpg", alt: "Feedback de aluno no WhatsApp 5" },
+      { url: "/media/testimonials/print6.jpg", alt: "Feedback de aluno no WhatsApp 6" }
+    ],
     items: [
       { name: "Isabelle", profession: "Nutricionista", videoUrl: "https://www.youtube.com/shorts/LR1LZWClatY" },
       { name: "Calebe Tatagiba", profession: "Empresário", videoUrl: "https://www.youtube.com/shorts/5lVzbWsxA58" },

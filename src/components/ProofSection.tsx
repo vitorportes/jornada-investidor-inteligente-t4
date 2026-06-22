@@ -9,6 +9,11 @@ const ProofSection = () => {
   const { proofs } = landingContent;
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
 
+  const allPrints = [
+    ...(proofs.instagramPrints || []),
+    ...(proofs.whatsappPrints || [])
+  ];
+
   // Helper function to extract YouTube ID from Shorts or regular links
   const getYouTubeId = (url: string) => {
     const shortsRegex = /shorts\/([^/?]+)/;
@@ -35,6 +40,30 @@ const ProofSection = () => {
           <p className="text-lg md:text-xl text-slate-600">
             {proofs.subtitle}
           </p>
+        </div>
+
+        {/* Combined Prints Testimonials (Masonry Wall of Love) */}
+        {allPrints.length > 0 && (
+          <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 mb-20 [column-fill:_balance] box-border">
+            {allPrints.map((print, index) => (
+              <div key={index} className="break-inside-avoid mb-6">
+                <img
+                  src={print.url}
+                  alt={print.alt}
+                  className="w-full h-auto rounded-2xl border-4 border-white shadow-premium bg-white transition-all duration-300 hover:scale-[1.01] hover:shadow-xl animate-fade-in"
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Transition / Video Section Title */}
+        <div className="text-center mb-12 mt-24">
+          <h3 className="text-2xl font-black text-premium-dark uppercase tracking-tight mb-2">
+            Depoimentos em Vídeo
+          </h3>
+          <p className="text-slate-500 font-medium">Veja e ouça a história de quem viveu a experiência na prática.</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -132,10 +161,11 @@ const ProofSection = () => {
         <div className="mt-20 text-center">
           <div className="inline-flex items-center gap-3 px-6 py-3 bg-white rounded-full border border-slate-100 shadow-sm">
             <Users className="w-5 h-5 text-accent" />
-            <p className="text-slate-500 font-bold text-sm uppercase tracking-wider">Mais de 500 vidas impactadas pelo método</p>
+            <p className="text-slate-500 font-bold text-sm uppercase tracking-wider">Mais de 100 vidas impactadas pelo método</p>
           </div>
         </div>
       </div>
+
     </section>
   );
 };
