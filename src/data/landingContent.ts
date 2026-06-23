@@ -20,9 +20,9 @@ export const landingContent = {
   eventDetails: {
     location: "Macaé/RJ",
     venue: "Hotel Royal Kingdom",
-    time: "Das 8h às 18h",
-    date: "Sábado, 15 de agosto de 2026",
-    isoDate: "2026-08-15T08:00:00"
+    time: "Das 8h às 17h",
+    date: "Sábado, 29 de agosto de 2026",
+    isoDate: "2026-08-29T08:00:00"
   },
   method: {
     title: "Como funciona na prática",
@@ -67,45 +67,41 @@ export const landingContent = {
   },
   offer: {
     title: "Ao entrar na Jornada Investidor Inteligente, você recebe:",
-items: [
-  {
-    title: "Imersão Presencial de 1 Dia",
-    description: "Em um único dia, você sai da confusão e constrói uma visão clara sobre onde está, o que precisa organizar e quais passos fazem sentido para começar ou evoluir seus investimentos."
-  },
-  {
-    title: "Apostila / Guia do Método Carteira Inteligente",
-    description: "Você sai da imersão com um plano organizado em mãos para revisar decisões, relembrar o método e não voltar a se sentir perdido depois do evento."
-  },
-  {
-    title: "Planilha Carteira Inteligente",
-    description: "Você visualiza sua carteira de forma simples, identifica investimentos soltos e entende o que precisa manter, ajustar ou reorganizar de acordo com seus objetivos."
-  },
-  {
-    title: "Simulador de Aportes Mensais",
-    description: "Você descobre quanto pode investir por mês e visualiza como a constância dos aportes pode ajudar a transformar dinheiro parado em patrimônio ao longo do tempo."
-  },
-  {
-    title: "Checklist de Avaliação de Produto Financeiro",
-    description: "Antes de aceitar uma oferta do banco ou seguir uma recomendação, você analisa os principais critérios e reduz o risco de investir em algo que não combina com seu perfil e seus objetivos."
-  },
-  {
-    title: "Grupo Exclusivo",
-    description: "Você continua acompanhado depois da imersão, tira dúvidas, reforça o aprendizado e evita ficar sozinho justamente no momento de colocar o plano em prática."
-  },
-  {
-    title: "Plantão de Dúvidas Pós-Imersão",
-    description: "Quando surgir aquela dúvida ao abrir a corretora ou revisar seus investimentos, você terá apoio para não travar, não adiar e não tomar decisões no impulso."
-  },
-  {
-    title: "Estudos de Caso / Análises Reais",
-    description: "Você aprende a reconhecer erros e oportunidades em situações parecidas com a sua, tornando mais fácil aplicar o método na própria carteira."
-  }
-]
+    items: [
+      {
+        title: "Imersão Presencial de 1 Dia",
+        description: "Em um único dia, você sai da confusão e constrói uma visão clara sobre onde está, o que precisa organizar e quais passos fazem sentido para começar ou evoluir seus investimentos."
+      },
+      {
+        title: "Apostila / Guia do Método Carteira Inteligente",
+        description: "Você sai da imersão com um plano organizado em mãos para revisar decisões, relembrar o método e não voltar a se sentir perdido depois do evento."
+      },
+      {
+        title: "Planilha Carteira Inteligente",
+        description: "Você visualiza sua carteira de forma simples, identifica investimentos soltos e entende o que precisa manter, ajustar ou reorganizar de acordo com seus objetivos."
+      },
+      {
+        title: "Simulador de Aportes Mensais",
+        description: "Você descobre quanto pode investir por mês e visualiza como a constância dos aportes pode ajudar a transformar dinheiro parado em patrimônio ao longo do tempo."
+      },
+      {
+        title: "Checklist de Avaliação de Produto Financeiro",
+        description: "Antes de aceitar uma oferta do banco ou seguir uma recomendação, você analisa os principais critérios e reduz o risco de investir em algo que não combina com seu perfil e seus objetivos."
+      },
+      {
+        title: "Plantão de Dúvidas Pós-Imersão",
+        description: "Quando surgir aquela dúvida ao abrir a corretora ou revisar seus investimentos, você terá apoio para não travar, não adiar e não tomar decisões no impulso."
+      },
+      {
+        title: "Estudos de Caso / Análises Reais",
+        description: "Você aprende a reconhecer erros e oportunidades em situações parecidas com a sua, tornando mais fácil aplicar o método na própria carteira."
+      }
+    ]
   },
   bonus: [
-    { title: "Guia Primeiros Passos Fora da Poupança", description: "Para quem sabe que precisa sair da poupança, mas ainda sente medo. Mostra como pensar com critério sobre reserva, liquidez e risco." },
-    { title: "Mini Treinamento Anti-Dica Quente", description: "Para quem quer parar de cair em recomendações soltas e aprender a filtrar o que realmente faz sentido para seu perfil." },
-    { title: "Mapa de Revisão Mensal da Carteira", description: "Aprenda o que observar e como acompanhar seus investimentos sem ansiedade e sem trocar de estratégia a cada oscilação." }
+    { title: "Método Barsi", description: "Aprenda a selecionar boas empresas e montar uma estratégia de longo prazo focada em patrimônio e renda." },
+    { title: "Apostila de Projeção de Patrimônio", description: "Calcule quanto investir por mês e em quanto tempo você pode alcançar suas metas financeiras." },
+    { title: "Grupo VIP no WhatsApp por 1 Ano", description: "Tire dúvidas, receba orientações e mantenha sua estratégia em prática durante 12 meses." }
   ],
   pricing: {
     price: "397",
@@ -114,7 +110,7 @@ items: [
     note: "Vagas limitadas por ser uma imersão presencial."
   },
   guarantee: {
-    text: "Por se tratar de uma imersão presencial de 1 dia, com vaga reservada, estrutura física, material, organização e acompanhamento ao vivo, a Jornada Investidor Inteligente não possui garantia de reembolso após a confirmação da inscrição. A sua vaga é reservada para uma experiência presencial, prática e guiada. Mas você não estará sozinho: além da imersão, terá acesso ao grupo exclusivo por 1 mês para tirar dúvidas, revisar conceitos e dar seus próximos passos com mais segurança."
+    text: "Por se tratar de uma imersão presencial de 1 dia, com vaga reservada, estrutura física, material, organização e acompanhamento ao vivo, a Jornada Investidor Inteligente não possui garantia de reembolso após a confirmação da inscrição. A sua vaga é reservada para uma experiência presencial, prática e guiada. Mas você não estará sozinho: além da imersão, terá acesso ao grupo VIP no WhatsApp por 1 ano para tirar dúvidas, revisar conceitos e manter sua estratégia em prática com segurança."
   },
   proofs: {
     title: "Veja o que alunos de edições anteriores disseram depois de viver a Jornada",
@@ -142,7 +138,7 @@ items: [
       { name: "Calebe Tatagiba", profession: "Empresário", videoUrl: "https://www.youtube.com/shorts/5lVzbWsxA58" },
       { name: "Danilo", profession: "Gestor de Projetos", videoUrl: "https://www.youtube.com/shorts/0rmCqlyfg1g" },
       { name: "Isac Mendes", profession: "Professor Universitário", videoUrl: "https://www.youtube.com/shorts/9cRM4W_Oe94" },
-      { name: "Eddie Paiva", profession: "Professor", videoUrl: "https://www.youtube.com/shorts/tu7l05-nBis" },
+      { name: "Rose Nascimento", profession: "Podóloga", videoUrl: "https://www.youtube.com/shorts/jEuNpSwqHes" },
       { name: "Ridley Frazoso", profession: "Professor Universitário", videoUrl: "https://www.youtube.com/shorts/ICdMy1u9PVI" }
     ],
     gallery: [
@@ -153,13 +149,13 @@ items: [
   },
   authority: {
     name: "Luciano Mangueira",
-    title: "Especialista em Educação Financeira",
+    title: "Especialista em Investimentos Financeiros",
     credentials: [
       "Mestrado em Gestão pela UFF/RJ",
       "Pós-graduação em Investimentos Financeiros pela FGV/SP",
       "Pós-graduação em Gestão de Projetos pela PUC/RJ",
-      "Educador Financeiro e Consultor",
-      "Professor Universitário há 20 anos"
+      "Consultor e Educador Financeiro",
+      "Professor Universitário há 21 anos"
     ],
     bio: "Há alguns anos, eu era exatamente o tipo de pessoa que a Jornada atende hoje. Tinha uma boa formação acadêmica, uma carreira sólida — e não fazia a menor ideia do que fazer com meu dinheiro além de deixar na poupança ou aceitar o que o gerente sugeria.\n\nPassei anos estudando investimentos por conta própria. Errei, aprendi, errei de novo. Vi de perto o custo de decisões tomadas por impulso, por \"dica quente\" ou por falta de método. E percebi que o problema nunca foi falta de inteligência ou disciplina — foi falta de um caminho estruturado.\n\n\"Depois de muitos anos estudando, errando e investindo na prática, ficou claro que o maior problema das pessoas não é a falta de dinheiro — é a falta de clareza e autonomia. Minha missão é guiar você para assumir o controle da sua vida financeira.\"\n\nÉ esse caminho que eu sistematizei no Método Carteira Inteligente. E é esse caminho que eu conduzo na Jornada — presencialmente, passo a passo, com a mesma atenção que eu gostaria de ter recebido quando comecei.",
   },
@@ -182,7 +178,7 @@ items: [
     { q: "Essa imersão substitui uma consultoria individual?", a: "Não. É uma experiência educacional e prática que dá autonomia, mas não substitui recomendação personalizada formal." }
   ],
   support: {
-    text: "Você não estará sozinho depois da imersão. Após participar da Jornada Investidor Inteligente, você terá suporte pelo WhatsApp e acesso ao grupo exclusivo por 1 mês para tirar dúvidas e manter o foco nos primeiros passos."
+    text: "Você não estará sozinho depois da imersão. Após participar da Jornada Investidor Inteligente, você terá suporte e acesso ao grupo VIP no WhatsApp por 1 ano para tirar dúvidas e manter o foco nos primeiros passos."
   },
   rationalArguments: [
     { title: "Excesso de informação", text: "Hoje encontramos milhares de posts sobre investimentos, mas informação solta não vira estratégia. A Jornada organiza esse excesso em um método simples." },

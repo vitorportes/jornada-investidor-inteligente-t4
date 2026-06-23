@@ -67,6 +67,7 @@ const AuthoritySection = () => {
                   fill
                   className="object-cover"
                   priority
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 512px"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-premium-dark/60 via-transparent to-transparent"></div>
                 

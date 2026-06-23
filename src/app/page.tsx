@@ -17,6 +17,7 @@ import CTAButton from "@/components/CTAButton";
 import { CheckCircle, ShieldCheck, Zap } from "lucide-react";
 import { landingContent } from "@/data/landingContent";
 import CountdownTimer from "@/components/CountdownTimer";
+import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
 
 export default function Home() {
   return (
@@ -83,6 +84,7 @@ export default function Home() {
       </section>
 
       <Footer />
+      <WhatsAppFloatingButton />
     </main>
   );
 }

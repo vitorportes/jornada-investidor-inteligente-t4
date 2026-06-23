@@ -27,6 +27,7 @@ const ProductExplainer = () => {
                   height={800}
                   className="w-full h-auto"
                   priority
+                  sizes="(max-width: 1024px) 100vw, 640px"
                 />
               </div>
               
@@ -79,12 +80,6 @@ const ProductExplainer = () => {
                   </div>
                 );
               })}
-            </div>
-            
-            <div className="p-6 bg-white rounded-2xl border-l-4 border-accent shadow-premium hover:shadow-xl transition-shadow duration-300">
-              <p className="text-slate-700 italic font-medium leading-relaxed">
-                &quot;Não é sobre acertar o próximo grande ativo. É sobre saber proteger seu dinheiro e tomar decisões com clareza.&quot;
-              </p>
             </div>
           </div>
         </div>

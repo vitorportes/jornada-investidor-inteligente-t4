@@ -47,11 +47,13 @@ const ProofSection = () => {
           <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 mb-20 [column-fill:_balance] box-border">
             {allPrints.map((print, index) => (
               <div key={index} className="break-inside-avoid mb-6">
-                <img
+                <Image
                   src={print.url}
                   alt={print.alt}
+                  width={400}
+                  height={800}
                   className="w-full h-auto rounded-2xl border-4 border-white shadow-premium bg-white transition-all duration-300 hover:scale-[1.01] hover:shadow-xl animate-fade-in"
-                  loading="lazy"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>
             ))}
@@ -105,6 +107,7 @@ const ProofSection = () => {
                           alt={`Miniatura depoimento ${item.name}`}
                           fill
                           className="object-cover opacity-60 group-hover/video:opacity-80 transition-opacity duration-500"
+                          sizes="(max-width: 1024px) 50vw, 33vw"
                         />
                       ) : (
                         <div className="absolute inset-0 bg-accent/5 group-hover/video:bg-accent/10 transition-colors"></div>
@@ -152,6 +155,7 @@ const ProofSection = () => {
                   alt={photo.alt}
                   fill
                   className="object-cover"
+                  sizes="(max-width: 640px) 100vw, 33vw"
                 />
               </div>
             ))}

@@ -35,16 +35,15 @@ const PricingSection = () => {
                 <div className="grid grid-cols-1 gap-3">
                   {[
                     { label: "Imersão Presencial de 1 Dia", value: "R$ 497" },
+                    { label: "Grupo VIP no WhatsApp por 1 Ano", value: "R$ 397" },
                     { label: "Plantão de Dúvidas Pós-Imersão", value: "R$ 297" },
-                    { label: "Grupo Exclusivo por 1 Mês", value: "R$ 147" },
+                    { label: "Método Barsi", value: "R$ 197" },
                     { label: "Apostila do Método Carteira Inteligente", value: "R$ 97" },
                     { label: "Simulador de Aportes Mensais", value: "R$ 97" },
                     { label: "Estudos de Caso e Análises Reais", value: "R$ 97" },
-                    { label: "Guia Primeiros Passos Fora da Poupança", value: "R$ 67" },
+                    { label: "Apostila de Projeção de Patrimônio", value: "R$ 97" },
                     { label: "Planilha Carteira Inteligente", value: "R$ 47" },
-                    { label: "Mini Treinamento Anti-Dica Quente", value: "R$ 47" },
                     { label: "Checklist de Avaliação de Produto Financeiro", value: "R$ 37" },
-                    { label: "Mapa de Revisão Mensal da Carteira", value: "R$ 37" },
                   ].map((item, i) => (
                     <div key={i} className="flex justify-between items-center text-xs md:text-sm border-b border-white/5 pb-1.5">
                       <span className="text-slate-300 font-medium">{item.label}</span>
@@ -54,7 +53,7 @@ const PricingSection = () => {
                   
                   <div className="flex justify-between items-center text-sm md:text-base font-bold pt-3 text-slate-200">
                     <span>Total:</span>
-                    <span className="text-slate-500 line-through font-black font-mono tracking-tight">R$ 1.470</span>
+                    <span className="text-slate-500 line-through font-black font-mono tracking-tight">R$ 1.860</span>
                   </div>
                 </div>
 
