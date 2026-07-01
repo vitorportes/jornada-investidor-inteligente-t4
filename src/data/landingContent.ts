@@ -3,6 +3,7 @@ export const landingContent = {
     headline: "Você sabe que precisa investir melhor, mas o medo de perder dinheiro e a confusão entre tantas opções fazem você continuar adiando",
     subheadline: "Em 1 dia, a Jornada Investidor Inteligente vai ajudar você a entender o que fazer com seu dinheiro, organizar seus investimentos e construir uma estratégia coerente com sua realidade — mesmo que hoje você não saiba por onde começar.",
     description: "Imersão presencial, prática e guiada para quem quer parar de depender de dicas, gerente de banco e vídeos soltos na internet.",
+    videoUrl: "https://youtu.be/Ufsqu7QbjP8",
     bullets: [
       "Parar de investir por impulso, medo ou indicação dos outros.",
       "Entender quais investimentos fazem sentido para o seu momento de vida.",

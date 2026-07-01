@@ -1,12 +1,29 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
+import Image from 'next/image';
 import CTAButton from './CTAButton';
 import { landingContent } from '@/data/landingContent';
 import { CheckCircle2, MapPin, Calendar, Clock, Hotel } from 'lucide-react';
 
 const Hero = () => {
   const { hero, eventDetails } = landingContent;
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  // Helper function to extract YouTube ID from Shorts or regular links
+  const getYouTubeId = (url?: string) => {
+    if (!url) return null;
+    const shortsRegex = /shorts\/([^/?]+)/;
+    const match = url.match(shortsRegex);
+    if (match) return match[1];
+    
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+    const standardMatch = url.match(regExp);
+    return (standardMatch && standardMatch[2].length === 11) ? standardMatch[2] : null;
+  };
+
+  // Safe check if hero has videoUrl (which we added as optional or standard)
+  const videoId = getYouTubeId((hero as any).videoUrl);
 
   return (
     <section className="relative min-h-[95vh] flex items-center justify-center pt-20 md:pt-28 pb-20 px-4 bg-premium-black overflow-hidden">
@@ -39,7 +56,7 @@ const Hero = () => {
                 <div className="w-1 h-1 bg-white/20 rounded-full"></div>
                 <div className="flex items-center gap-1.5 text-xs font-bold text-slate-300">
                   <Calendar className="w-3.5 h-3.5 text-accent" />
-                  <span>15 de Agosto</span>
+                  <span>29 de Agosto</span>
                 </div>
               </div>
             </div>
@@ -60,15 +77,39 @@ const Hero = () => {
             {hero.subheadline}
           </p>
 
-          {/* Video Placeholder */}
-          <div className="w-full max-w-4xl mb-12 aspect-video bg-white/5 rounded-[2rem] border border-white/10 backdrop-blur-sm relative overflow-hidden group cursor-pointer shadow-2xl">
-            <div className="absolute inset-0 flex flex-col items-center justify-center">
-              <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center shadow-accent transition-transform group-hover:scale-110">
-                <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[18px] border-l-premium-black border-b-[10px] border-b-transparent ml-1"></div>
+          {/* Video Block */}
+          <div className="w-full max-w-4xl mb-12 aspect-video bg-white/5 rounded-[2rem] border border-white/10 backdrop-blur-sm relative overflow-hidden group shadow-2xl">
+            {isPlaying && videoId ? (
+              <iframe
+                src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`}
+                title="Vídeo de Apresentação"
+                className="w-full h-full border-0 rounded-[2rem]"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            ) : (
+              <div 
+                className="absolute inset-0 cursor-pointer"
+                onClick={() => setIsPlaying(true)}
+              >
+                {videoId ? (
+                  <Image
+                    src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+                    alt="Miniatura do vídeo de apresentação"
+                    fill
+                    className="object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500"
+                    priority
+                  />
+                ) : null}
+                <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
+                  <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center shadow-accent transition-transform group-hover:scale-110">
+                    <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[18px] border-l-premium-black border-b-[10px] border-b-transparent ml-1"></div>
+                  </div>
+                  <p className="mt-6 text-white font-bold uppercase tracking-widest text-sm">Assistir Vídeo de Apresentação</p>
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-premium-black/40 to-transparent pointer-events-none"></div>
               </div>
-              <p className="mt-6 text-white font-bold uppercase tracking-widest text-sm">Vídeo de Apresentação</p>
-            </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-premium-black/40 to-transparent pointer-events-none"></div>
+            )}
           </div>
 
           {/* Bullets Points Card */}
